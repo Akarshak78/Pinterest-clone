@@ -1,0 +1,163 @@
+/* Profile container center + padding */
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Round avatar */
+.profile-avatar img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid #fff;
+}
+
+/* Username */
+.profile-username {
+  color: #ad0000;
+  margin-bottom: 1rem;
+}
+
+/* Account Settings button */
+.account-settings-btn {
+  background-color: #e60023;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.account-settings-btn:hover {
+  background-color: #b0001a; 
+}
+
+
+.profile-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 1rem;
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 1200px; 
+}
+
+
+
+.profile-gallery img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.upload-btn {
+  background-color: #0073e6;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+  text-decoration: none;
+  
+}
+.upload-btn:hover {
+  background-color: #005bb5; /* Darker blue on hover */
+}
+.or {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 16px;
+  color: gray;
+}
+.detail:focus {
+  box-shadow: 0px -7px 3px -2px rgba(15, 91, 231, 0.4),
+    0px 7px 3px -2px rgba(15, 91, 231, 0.4),
+    7px 0px 3px -2px rgba(15, 91, 231, 0.4),
+    -7px 0px 3px -2px rgba(15, 91, 231, 0.4);
+}
+.logout {
+ text-decoration: none;
+  color: #fff;
+  background-color: #e60023;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.logout:hover {
+  background-color: #b0001a; /* Darker red on hover */
+}
+
+.delete-btn {
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+.delete-btn:hover {
+  background-color: #cc0000; /* Darker red on hover */
+}
+/* ✅ Navbar container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #f5f5f5; /* light gray background */
+  border-bottom: 1px solid #ddd;
+}
+
+/* ✅ Left and right sections */
+.navbar-left,
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* ✅ Links style */
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+/* ✅ Username style */
+.nav-username {
+  font-weight: bold;
+  color: #555;
+}
+
+/* ✅ Logout button style */
+.logout-form {
+  display: inline;
+}
+
+.logout-btn {
+  background-color: #c82333;
+  border: none;
+  padding: 6px 12px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #a71d2a;
+}

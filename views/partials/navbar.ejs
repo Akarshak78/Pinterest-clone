@@ -1,0 +1,15 @@
+<nav class="navbar">
+  <div class="navbar-left">
+    <a href="/profile" class="nav-link">Profile</a>
+    <% if (user) { %>
+      <span class="nav-username"><%= user.username %></span>
+    <% } %>
+  </div>
+  <div class="navbar-right">
+    <a href="/profile" class="nav-link">Home</a>
+    <a href="/feed" class="nav-link">Feed</a>
+    <form action="/logout" method="GET" class="logout-form">
+      <button type="submit" class="logout-btn">Logout</button>
+    </form>
+  </div>
+</nav>

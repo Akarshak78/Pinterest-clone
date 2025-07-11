@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Register</title>
+  <link rel="stylesheet" href="/stylesheets/register.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      <!-- Pinterest logo -->
+      <img src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png" alt="pin logo" class="img1" />
+      <p class="header">Sign up to see more</p>
+
+      <!-- ✅ Updated form with all fields -->
+      <form action="/register" method="POST">
+        <input type="email" name="email" placeholder="Email" class="detail" required /><br />
+        <input type="text" name="username" placeholder="Username" class="detail" required /><br />
+        <input type="text" name="fullName" placeholder="Full Name" class="detail" required /><br />
+        <input type="password" name="password" placeholder="Password" class="detail" required /><br />
+
+        <button type="submit" class="btn int">Sign up</button>
+      </form>
+
+      <p class="or">OR</p>
+
+      <!-- ✅ Use <a> for social logins -->
+      <a href="#" class="btn fbk">
+        <i class="fab fa-facebook fa-lg" style="color: white; padding-right: 10px"></i>
+        Continue with Facebook
+      </a>
+      <br />
+      <a href="#" class="btn ggl">
+        <i class="fab fa-google" style="color: rgb(11, 241, 22); padding-right: 10px"></i>
+        Continue with Google
+      </a>
+
+      <!-- ✅ Keep footer inside content -->
+      <p>
+        By continuing, you agree to Pinterest's
+        <b>Terms of Service, Privacy Policy.</b>
+      </p>
+      <hr />
+     <p>Already on Pinterest? <a href="/login">Log in</a></p>
+    </div>
+  </div>
+
+</body>
+</html>
