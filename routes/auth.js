@@ -6,6 +6,10 @@ const Post = require('../Model/Post');
 const router = express.Router();
 
 // ✅ Register form
+router.get('/', (req, res) => {
+  res.redirect('/register');
+});
+
 router.get('/register', (req, res) => {
   res.render('register'); // no need to pass { success, error }
 });
