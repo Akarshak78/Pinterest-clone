@@ -5,6 +5,8 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const dotenv = require('dotenv');
+const MongoStore = require('connect-mongo');
+
 dotenv.config();
 
 // ✅ Database & auth
@@ -46,9 +48,17 @@ app.use('/uploads', express.static('uploads'));
 
 // ✅ Session & flash
 app.use(session({
-  secret: process.env.SESSION_SECRET || 'default_secret',
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: false,
+  store: MongoStore.create({
+    mongoUrl: process.env.MONGO_URI,
+    collectionName: 'sessions'
+  }),
+  cookie: {
+    secure: false, // ⚡ For localhost; use true + HTTPS in production!
+    maxAge: 1000 * 60 * 60 * 24 // 1 day
+  }
 }));
 app.use(flash());
 
